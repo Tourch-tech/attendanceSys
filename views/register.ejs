@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+            *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            overflow-x: hidden;
+            background-color: #d9d9d9;
+        }
+        .head{
+            background-color: #a61b26;
+            color: white;
+            width: 100%;
+            overflow: hidden;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 27px 12px;
+            margin-bottom: 70px;
+        }
+        .nav-link{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 13px;
+            margin-right: 45px;
+        }
+        .nav-link:hover{
+            font-size: 14px;
+            transition: .4s;
+
+        }
+        .name{
+            color: #0d0d0d;
+            height: 40px;
+            text-transform: uppercase;
+            font-size: 28px;
+        }
+        .date{
+            
+            border-bottom: 1px solid #0d0d0d;
+            font-size: 12px;
+            width: 100%;
+            padding: 8px;
+        }
+        .card{
+            width: 100%;
+            background-color: #d9d9d9;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 10px 5px 5px #c3c3c3;
+            padding: 12px;
+        }
+        h1{
+            padding-left: 40px;
+        }
+        .phone{
+            font-size: 8px;
+        }
+        .align{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 400px;
+            height: 300px;
+            background-color: #a61b26;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 6px;
+            align-content: center;
+            text-align: center;
+        }
+        .inp{
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+        input{
+            background: #d9d9d9;
+            border-radius: 5px;
+            
+            margin: 10px;
+            outline: none;
+            border: none;
+            height: 60px;
+
+        }
+        #submit{
+            background: #fff;
+            width: 30%;
+            font-weight: 900;
+            align-self: center;
+            text-transform: uppercase;
+            transition: .5s;
+            cursor: pointer;
+        }
+        #submit:hover{
+            background: #db4e5a;
+        }
+        p{
+            color: #fff;
+            font-weight: 600;
+            font-size: 11px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <center><h1>Lincoln library Attendance</h1></center>
+    <a href="/" class="nav-link">Home</a>
+
+    </div>
+
+    <div class="align">
+       
+        <form class="form1" action="/signAttendance" method="post">
+            <p><%= msg %>!</p>
+            <input class="inp" type="text" name="name" required>
+            <input class="inp" type="number" name="phoneNum" minlength="11" required>
+            <!-- <select name="company">
+                <option value="Abu">Abu</option>
+            </select> -->
+            <input id="submit" type="submit">
+        </form>
+    </div>
+
+</body>
+</html>
